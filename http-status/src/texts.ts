@@ -15,7 +15,7 @@ export const EarlyHints = 'Early Hints'
 //                                                                            //
 // -------------------------------------------------------------------------- //
 
-export const Ok = 'Ok'
+export const Ok = 'OK'
 export const Created = 'Created'
 export const Accepted = 'Accepted'
 export const NonAuthoritativeInformation = 'Non Authoritative Information'
@@ -24,7 +24,7 @@ export const ResetContent = 'Reset Content'
 export const PartialContent = 'Partial Content'
 export const MultiStatus = 'Multi Status'
 export const AlreadyReported = 'Already Reported'
-export const IMUsed = `I'm Used`
+export const ImUsed = `I'm Used`
 
 // -------------------------------------------------------------------------- //
 //                                                                            //
@@ -62,7 +62,7 @@ export const Gone = 'Gone'
 export const LengthRequired = 'Length Required'
 export const PreconditionFailed = 'Precondition Failed'
 export const PayloadTooLarge = 'Payload Too Large'
-export const URITooLong = 'URI Too Long'
+export const UriTooLong = 'URI Too Long'
 export const UnsupportedMediaType = 'Unsupported Media Type'
 export const RangeNotSatisfiable = 'Range Not Satisfiable'
 export const ExpectationFailed = 'Expectation Failed'
@@ -89,7 +89,7 @@ export const NotImplemented = 'Not Implemented'
 export const BadGateway = 'Bad Gateway'
 export const ServiceUnavailable = 'Service Unavailable'
 export const GatewayTimeout = 'Gateway Timeout'
-export const HTTPVersionNotSupported = 'HTTP Version Not Supported'
+export const HttpVersionNotSupported = 'HTTP Version Not Supported'
 export const VariantAlsoNegotiates = 'Variant Also Negotiates'
 export const InsufficientStorage = 'Insufficient Storage'
 export const LoopDetected = 'Loop Detected'

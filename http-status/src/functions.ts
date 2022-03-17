@@ -4,7 +4,7 @@ import * as tuples from './tuples'
 const is =
   (res: number) =>
   (code: number): boolean =>
-    code / 100 === res
+    Math.floor(code / 100) === res
 
 /** Returns true if `code` is an "informational" status code, e.g. 100-199 */
 export const isInformational = is(1)

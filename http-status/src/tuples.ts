@@ -38,7 +38,7 @@ export const AlreadyReported: StatusTuple = [
   C.AlreadyReported,
   T.AlreadyReported,
 ]
-export const IMUsed: StatusTuple = [C.IMUsed, T.IMUsed]
+export const IMUsed: StatusTuple = [C.ImUsed, T.ImUsed]
 
 // -------------------------------------------------------------------------- //
 //                                                                            //
@@ -105,7 +105,7 @@ export const PayloadTooLarge: StatusTuple = [
   C.PayloadTooLarge,
   T.PayloadTooLarge,
 ]
-export const URITooLong: StatusTuple = [C.URITooLong, T.URITooLong]
+export const UriTooLong: StatusTuple = [C.UriTooLong, T.UriTooLong]
 export const UnsupportedMediaType: StatusTuple = [
   C.UnsupportedMediaType,
   T.UnsupportedMediaType,
@@ -171,9 +171,9 @@ export const ServiceUnavailable: StatusTuple = [
   T.ServiceUnavailable,
 ]
 export const GatewayTimeout: StatusTuple = [C.GatewayTimeout, T.GatewayTimeout]
-export const HTTPVersionNotSupported: StatusTuple = [
-  C.HTTPVersionNotSupported,
-  T.HTTPVersionNotSupported,
+export const HttpVersionNotSupported: StatusTuple = [
+  C.HttpVersionNotSupported,
+  T.HttpVersionNotSupported,
 ]
 export const VariantAlsoNegotiates: StatusTuple = [
   C.VariantAlsoNegotiates,
