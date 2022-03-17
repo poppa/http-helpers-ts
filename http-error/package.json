@@ -1,0 +1,16 @@
+{
+  "name": "@poppanator/http-error",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc -p tsconfig.build.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@poppanator/http-constants": "*"
+  }
+}

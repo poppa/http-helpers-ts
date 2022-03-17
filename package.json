@@ -17,8 +17,8 @@
   },
   "homepage": "https://github.com/poppa/http-helpers-ts#readme",
   "workspaces": [
-    "http-headers",
-    "http-status"
+    "http-constants",
+    "http-error"
   ],
   "devDependencies": {
     "@types/jest": "^27.4.1",

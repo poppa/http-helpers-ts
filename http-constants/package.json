@@ -1,8 +1,8 @@
 {
-  "name": "@poppanator/http-status",
+  "name": "@poppanator/http-constants",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "jest",
     "build": "tsc -p tsconfig.build.json"
