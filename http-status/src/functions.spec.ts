@@ -317,3 +317,18 @@ describe('getStatusText()', () => {
     expect(F.getStatusText(511)).toEqual('Network Authentication Required')
   })
 })
+
+describe('isHttpStatus()', () => {
+  test('Should return true for know status HTTP codes such as 102, 200 and 404', () => {
+    expect(F.isHttpStatus(102)).toEqual(true)
+    expect(F.isHttpStatus(200)).toEqual(true)
+    expect(F.isHttpStatus(404)).toEqual(true)
+  })
+
+  test('Should return false for non HTTP status codes such as 99, 270 and 589 and 605', () => {
+    expect(F.isHttpStatus(99)).toEqual(false)
+    expect(F.isHttpStatus(270)).toEqual(false)
+    expect(F.isHttpStatus(589)).toEqual(false)
+    expect(F.isHttpStatus(605)).toEqual(false)
+  })
+})

@@ -22,6 +22,13 @@ export const isClientError = is(4)
 export const isServerError = is(5)
 
 /**
+ * Check if `code` is an existing HTTP status code
+ */
+export function isHttpStatus(code: number): boolean {
+  return Object.values(tuples).some(([status]) => code === status)
+}
+
+/**
  * Returns the associated message with the status code `status`, or `undefined`
  * if not found
  */
