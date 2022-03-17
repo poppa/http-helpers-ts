@@ -1,16 +1,21 @@
 import * as C from './codes'
 import * as T from './texts'
 
+export type StatusTuple = [number, string]
+
 // -------------------------------------------------------------------------- //
 //                                                                            //
 //                               Informational                                //
 //                                                                            //
 // -------------------------------------------------------------------------- //
 
-export const Continue = [C.Continue, T.Continue]
-export const SwitchingProtocol = [C.SwitchingProtocol, T.SwitchingProtocol]
-export const Processing = [C.Processing, T.Processing]
-export const EarlyHints = [C.EarlyHints, T.EarlyHints]
+export const Continue: StatusTuple = [C.Continue, T.Continue]
+export const SwitchingProtocol: StatusTuple = [
+  C.SwitchingProtocol,
+  T.SwitchingProtocol,
+]
+export const Processing: StatusTuple = [C.Processing, T.Processing]
+export const EarlyHints: StatusTuple = [C.EarlyHints, T.EarlyHints]
 
 // -------------------------------------------------------------------------- //
 //                                                                            //
@@ -18,17 +23,22 @@ export const EarlyHints = [C.EarlyHints, T.EarlyHints]
 //                                                                            //
 // -------------------------------------------------------------------------- //
 
-export const Ok = [C.Ok, T.Ok]
-export const Created = [C.Created, T.Created]
-export const Accepted = [C.Accepted, T.Accepted]
-// prettier-ignore
-export const NonAuthoritativeInformation = [C.NonAuthoritativeInformation, T.NonAuthoritativeInformation]
-export const NoContent = [C.NoContent, T.NoContent]
-export const ResetContent = [C.ResetContent, T.ResetContent]
-export const PartialContent = [C.PartialContent, T.PartialContent]
-export const MultiStatus = [C.MultiStatus, T.MultiStatus]
-export const AlreadyReported = [C.AlreadyReported, T.AlreadyReported]
-export const IMUsed = [C.IMUsed, T.IMUsed]
+export const Ok: StatusTuple = [C.Ok, T.Ok]
+export const Created: StatusTuple = [C.Created, T.Created]
+export const Accepted: StatusTuple = [C.Accepted, T.Accepted]
+export const NonAuthoritativeInformation: StatusTuple = [
+  C.NonAuthoritativeInformation,
+  T.NonAuthoritativeInformation,
+]
+export const NoContent: StatusTuple = [C.NoContent, T.NoContent]
+export const ResetContent: StatusTuple = [C.ResetContent, T.ResetContent]
+export const PartialContent: StatusTuple = [C.PartialContent, T.PartialContent]
+export const MultiStatus: StatusTuple = [C.MultiStatus, T.MultiStatus]
+export const AlreadyReported: StatusTuple = [
+  C.AlreadyReported,
+  T.AlreadyReported,
+]
+export const IMUsed: StatusTuple = [C.IMUsed, T.IMUsed]
 
 // -------------------------------------------------------------------------- //
 //                                                                            //
@@ -36,17 +46,29 @@ export const IMUsed = [C.IMUsed, T.IMUsed]
 //                                                                            //
 // -------------------------------------------------------------------------- //
 
-export const MultipleChoices = [C.MultipleChoices, T.MultipleChoices]
-export const MovedPermanently = [C.MovedPermanently, T.MovedPermanently]
-export const Found = [C.Found, T.Found]
-export const SeeOther = [C.SeeOther, T.SeeOther]
-export const NotModified = [C.NotModified, T.NotModified]
+export const MultipleChoices: StatusTuple = [
+  C.MultipleChoices,
+  T.MultipleChoices,
+]
+export const MovedPermanently: StatusTuple = [
+  C.MovedPermanently,
+  T.MovedPermanently,
+]
+export const Found: StatusTuple = [C.Found, T.Found]
+export const SeeOther: StatusTuple = [C.SeeOther, T.SeeOther]
+export const NotModified: StatusTuple = [C.NotModified, T.NotModified]
 /** @deprecated*/
-export const UseProxy = [C.UseProxy, T.UseProxy]
+export const UseProxy: StatusTuple = [C.UseProxy, T.UseProxy]
 /** @deprecated */
-export const SwitchProxy = [C.SwitchProxy, T.SwitchProxy]
-export const TemporaryRedirect = [C.TemporaryRedirect, T.TemporaryRedirect]
-export const PermanentRedirect = [C.PermanentRedirect, T.PermanentRedirect]
+export const SwitchProxy: StatusTuple = [C.SwitchProxy, T.SwitchProxy]
+export const TemporaryRedirect: StatusTuple = [
+  C.TemporaryRedirect,
+  T.TemporaryRedirect,
+]
+export const PermanentRedirect: StatusTuple = [
+  C.PermanentRedirect,
+  T.PermanentRedirect,
+]
 
 // -------------------------------------------------------------------------- //
 //                                                                            //
@@ -54,35 +76,83 @@ export const PermanentRedirect = [C.PermanentRedirect, T.PermanentRedirect]
 //                                                                            //
 // -------------------------------------------------------------------------- //
 
-export const BadRequest = 'Bad Request'
-export const Unauthorized = 'Unauthorized'
-export const PaymentRequired = 'Payment Required'
-export const Forbidden = 'Forbidden'
-export const NotFound = 'Not Found'
-export const MethodNotAllowed = 'Method Not Allowed'
-export const NotAcceptable = 'Not Acceptable'
-export const ProxyAuthenticationRequired = 'Proxy Authentication Required'
-export const RequestTimeout = 'Request Timeout'
-export const Conflict = 'Conflict'
-export const Gone = 'Gone'
-export const LengthRequired = 'Length Required'
-export const PreconditionFailed = 'Precondition Failed'
-export const PayloadTooLarge = 'Payload Too Large'
-export const URITooLong = 'URI Too Long'
-export const UnsupportedMediaType = 'Unsupported Media Type'
-export const RangeNotSatisfiable = 'Range Not Satisfiable'
-export const ExpectationFailed = 'Expectation Failed'
-export const ImAteapot = `I'm A Teapot`
-export const MisdirectedRequest = 'Misdirected Request'
-export const UnprocessableEntity = 'Unprocessable Entity'
-export const Locked = 'Locked'
-export const FailedDependency = 'Failed Dependency'
-export const TooEarly = 'Too Early'
-export const UpgradeRequired = 'Upgrade Required'
-export const PreconditionRequired = 'Precondition Required'
-export const TooManyRequests = 'Too Many Requests'
-export const RequestHeaderFieldsTooLarge = 'Request Header Fields Too Large'
-export const UnavailableForLegalReasons = 'Unavailable For Legal Reasons'
+export const BadRequest: StatusTuple = [C.BadRequest, T.BadRequest]
+export const Unauthorized: StatusTuple = [C.Unauthorized, T.Unauthorized]
+export const PaymentRequired: StatusTuple = [
+  C.PaymentRequired,
+  T.PaymentRequired,
+]
+export const Forbidden: StatusTuple = [C.Forbidden, T.Forbidden]
+export const NotFound: StatusTuple = [C.NotFound, T.NotFound]
+export const MethodNotAllowed: StatusTuple = [
+  C.MethodNotAllowed,
+  T.MethodNotAllowed,
+]
+export const NotAcceptable: StatusTuple = [C.NotAcceptable, T.NotAcceptable]
+export const ProxyAuthenticationRequired: StatusTuple = [
+  C.ProxyAuthenticationRequired,
+  T.ProxyAuthenticationRequired,
+]
+export const RequestTimeout: StatusTuple = [C.RequestTimeout, T.RequestTimeout]
+export const Conflict: StatusTuple = [C.Conflict, T.Conflict]
+export const Gone: StatusTuple = [C.Gone, T.Gone]
+export const LengthRequired: StatusTuple = [C.LengthRequired, T.LengthRequired]
+export const PreconditionFailed: StatusTuple = [
+  C.PreconditionFailed,
+  T.PreconditionFailed,
+]
+export const PayloadTooLarge: StatusTuple = [
+  C.PayloadTooLarge,
+  T.PayloadTooLarge,
+]
+export const URITooLong: StatusTuple = [C.URITooLong, T.URITooLong]
+export const UnsupportedMediaType: StatusTuple = [
+  C.UnsupportedMediaType,
+  T.UnsupportedMediaType,
+]
+export const RangeNotSatisfiable: StatusTuple = [
+  C.RangeNotSatisfiable,
+  T.RangeNotSatisfiable,
+]
+export const ExpectationFailed: StatusTuple = [
+  C.ExpectationFailed,
+  T.ExpectationFailed,
+]
+export const ImAteapot: StatusTuple = [C.ImAteapot, T.ImAteapot]
+export const MisdirectedRequest: StatusTuple = [
+  C.MisdirectedRequest,
+  T.MisdirectedRequest,
+]
+export const UnprocessableEntity: StatusTuple = [
+  C.UnprocessableEntity,
+  T.UnprocessableEntity,
+]
+export const Locked: StatusTuple = [C.Locked, T.Locked]
+export const FailedDependency: StatusTuple = [
+  C.FailedDependency,
+  T.FailedDependency,
+]
+export const TooEarly: StatusTuple = [C.TooEarly, T.TooEarly]
+export const UpgradeRequired: StatusTuple = [
+  C.UpgradeRequired,
+  T.UpgradeRequired,
+]
+export const PreconditionRequired: StatusTuple = [
+  C.PreconditionRequired,
+  T.PreconditionRequired,
+]
+export const TooManyRequests: StatusTuple = [
+  C.TooManyRequests,
+  T.TooManyRequests,
+]
+export const RequestHeaderFieldsTooLarge: StatusTuple = [
+  C.RequestHeaderFieldsTooLarge,
+  T.RequestHeaderFieldsTooLarge,
+]
+export const UnavailableForLegalReasons: StatusTuple = [
+  C.UnavailableForLegalReasons,
+  T.UnavailableForLegalReasons,
+]
 
 // -------------------------------------------------------------------------- //
 //                                                                            //
@@ -90,14 +160,32 @@ export const UnavailableForLegalReasons = 'Unavailable For Legal Reasons'
 //                                                                            //
 // -------------------------------------------------------------------------- //
 
-export const InternalServerError = 'Internal Server Error'
-export const NotImplemented = 'Not Implemented'
-export const BadGateway = 'Bad Gateway'
-export const ServiceUnavailable = 'Service Unavailable'
-export const GatewayTimeout = 'Gateway Timeout'
-export const HTTPVersionNotSupported = 'HTTP Version Not Supported'
-export const VariantAlsoNegotiates = 'Variant Also Negotiates'
-export const InsufficientStorage = 'Insufficient Storage'
-export const LoopDetected = 'Loop Detected'
-export const NotExtended = 'Not Extended'
-export const NetworkAuthenticationRequired = 'Network Authentication Required'
+export const InternalServerError: StatusTuple = [
+  C.InternalServerError,
+  T.InternalServerError,
+]
+export const NotImplemented: StatusTuple = [C.NotImplemented, T.NotImplemented]
+export const BadGateway: StatusTuple = [C.BadGateway, T.BadGateway]
+export const ServiceUnavailable: StatusTuple = [
+  C.ServiceUnavailable,
+  T.ServiceUnavailable,
+]
+export const GatewayTimeout: StatusTuple = [C.GatewayTimeout, T.GatewayTimeout]
+export const HTTPVersionNotSupported: StatusTuple = [
+  C.HTTPVersionNotSupported,
+  T.HTTPVersionNotSupported,
+]
+export const VariantAlsoNegotiates: StatusTuple = [
+  C.VariantAlsoNegotiates,
+  T.VariantAlsoNegotiates,
+]
+export const InsufficientStorage: StatusTuple = [
+  C.InsufficientStorage,
+  T.InsufficientStorage,
+]
+export const LoopDetected: StatusTuple = [C.LoopDetected, T.LoopDetected]
+export const NotExtended: StatusTuple = [C.NotExtended, T.NotExtended]
+export const NetworkAuthenticationRequired: StatusTuple = [
+  C.NetworkAuthenticationRequired,
+  T.NetworkAuthenticationRequired,
+]
