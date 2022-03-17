@@ -2,13 +2,13 @@
  * Standardized HTTP methods (verbs)
  */
 export type Method =
-  | typeof Get
-  | typeof Post
   | typeof Connect
   | typeof Delete
+  | typeof Get
   | typeof Head
   | typeof Options
   | typeof Patch
+  | typeof Post
   | typeof Put
   | typeof Trace
 
