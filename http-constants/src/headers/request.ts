@@ -1,4 +1,8 @@
 /**
+ * These are request-only headers
+ */
+
+/**
  * Acceptable instance-manipulations for the request.
  */
 export const Aim = 'A-IM'
@@ -60,33 +64,6 @@ export const AcceptLanguage = 'Accept-Language'
 export const AcceptDatetime = 'Accept-Datetime'
 
 /**
- * The `Access-Control-Request-Method` request header is used by browsers when
- * issuing a [preflight request](https://developer.mozilla.org/en-US/docs/Glossary/Preflight_request),
- * to let the server know which [HTTP method](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
- * will be used when the actual request is made.
- *
- * This header is necessary as the preflight request is always an
- * [`OPTIONS`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/OPTIONS)
- * and doesn't use the same method as the actual request.
- *
- * [Read more](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Request-Method)
- */
-export const AccessControlRequestMethod = 'Access-Control-Request-Method'
-
-/**
- * The `Access-Control-Request-Headers` request header is used by browsers when
- * issuing a [preflight request](https://developer.mozilla.org/en-US/docs/Glossary/Preflight_request),
- * to let the server know which HTTP headers the client might send when the
- * actual request is made (such as with `setRequestHeader()`).
- *
- * The complementary server-side header of `Access-Control-Allow-Headers` will
- * answer this browser-side header.
- *
- * [Read more](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Request-Headers)
- */
-export const AccessControlRequestHeaders = 'Access-Control-Request-Headers'
-
-/**
  * The HTTP `Authorization` request header can be used to provide credentials
  * that authenticate a user agent with a server, allowing access to a protected
  * resource.
@@ -94,42 +71,6 @@ export const AccessControlRequestHeaders = 'Access-Control-Request-Headers'
  * [Read more](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization)
  */
 export const Authorization = 'Authorization'
-
-/**
- * The `Cache-Control` HTTP header field holds directives (instructions) — in
- * both requests and responses — that control [caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching)
- * in browsers and shared caches (e.g. Proxies, CDNs).
- *
- * [Read more](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)
- */
-export const CacheControl = 'Cache-Control'
-
-/**
- * The `Connection` general header controls whether the network connection stays
- * open after the current transaction finishes. If the value sent is
- * `keep-alive`, the connection is persistent and not closed, allowing for
- * subsequent requests to the same server to be done.
- *
- * [Read more](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Connection)
- */
-export const Connection = 'Connection'
-
-/**
- * The `Content-Length` header indicates the size of the message body, in bytes,
- * sent to the recipient.
- *
- * [Read more](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Length)
- */
-export const ContentLength = 'Content-Length'
-
-/**
- * The `Content-Type` representation header is used to indicate the original
- * media type of the resource (prior to any content encoding applied for
- * sending).
- *
- * [Read more](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type)
- */
-export const ContentType = 'Content-Type'
 
 /**
  * The `Cookie` HTTP request header contains stored HTTP cookies associated with
@@ -141,25 +82,6 @@ export const ContentType = 'Content-Type'
  * [Read more](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cookie)
  */
 export const Cookie = 'Cookie'
-
-/**
- * The `Date` general HTTP header contains the date and time at which the
- * message was originated.
- *
- * > Warning: Date is listed in the forbidden header names in the fetch spec,
- * so this code will not send the Date header:
- *
- * > ```js
- * fetch('https://httpbin.org/get', {
- *   'headers': {
- *     'Date': (new Date()).toUTCString()
- *   }
- * })
- * > ```
- *
- * [Read more](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Date)
- */
-export const Date = 'Date'
 
 /**
  * The `Expect` HTTP request header indicates expectations that need to be met
@@ -281,35 +203,6 @@ export const IfUnmodifiedSince = 'If-Unmodified-Since'
 export const MaxForwards = 'Max-Forwards'
 
 /**
- * The `Origin` request header indicates the
- * [origin](https://developer.mozilla.org/en-US/docs/Glossary/Origin)
- * (scheme, hostname, and port) that caused the request. For example, if a user
- * agent needs to request resources included in a page, or fetched by scripts
- * that it executes, then the origin of the page may be included in the request.
- *
- * [Read more](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Origin)
- */
-export const Origin = 'Origin'
-
-/**
- * The `Pragma` HTTP/1.0 general header is an implementation-specific header
- * that may have various effects along the request-response chain. This header
- * serves for backwards compatibility with the HTTP/1.0 caches that do not have
- * a [Cache-Control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)
- * HTTP/1.1 header.
- *
- * > **Note:** `Pragma` is not specified for HTTP responses and is therefore not
- * > a reliable replacement for the general HTTP/1.1 `Cache-Control` header,
- * > although its behavior is the same as `Cache-Control: no-cache` if the
- * > `Cache-Control` header field is omitted in a request.
- * >
- * > Use `Pragma` only for backwards compatibility with HTTP/1.0 clients.
- *
- * [Read more](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma)
- */
-export const Pragma = 'Pragma'
-
-/**
  * The HTTP `Proxy-Authorization` request header contains the credentials to
  * authenticate a user agent to a proxy server, usually after the server has
  * responded with a [407](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/407)
@@ -354,6 +247,16 @@ export const Range = 'Range'
 export const Referer = 'Referer'
 
 /**
+ * The `Save-Data` [network client hint](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#network_client_hints)
+ * request header field is a boolean which indicates the client's preference for
+ * reduced data usage. This could be for reasons such as high transfer costs,
+ * slow connection speeds, etc.
+ *
+ * [Read more](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Save-Data)
+ */
+export const SaveData = 'Save-Data'
+
+/**
  * Specify the encodings the client can accept. Accepted values:
  *
  *   - `compress`
@@ -366,6 +269,17 @@ export const Referer = 'Referer'
 export const Te = 'TE'
 
 /**
+ * The HTTP `Upgrade-Insecure-Requests` request header sends a signal to the
+ * server expressing the client's preference for an encrypted and authenticated
+ * response, and that it can successfully handle the
+ * [upgrade-insecure-requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests)
+ * [CSP](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) directive.
+ *
+ * [Read more](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Upgrade-Insecure-Requests)
+ */
+export const UpgradeInsecureRequests = 'Upgrade-Insecure-Requests'
+
+/**
  * The `User-Agent` [request header](https://developer.mozilla.org/en-US/docs/Glossary/Request_header)
  * is a characteristic string that lets servers and network peers identify the
  * application, operating system, vendor, and/or version of the requesting
@@ -375,40 +289,84 @@ export const Te = 'TE'
  */
 export const UserAgent = 'User-Agent'
 
-/**
- * The HTTP 1.1 (only) `Upgrade` header can be used to upgrade an already
- * established client/server connection to a different protocol (over the same
- * transport protocol).
- *
- * For example, it can be used by a client to upgrade a connection from
- * HTTP 1.1 to HTTP 2.0, or an HTTP or HTTPS connection into a WebSocket.
- *
- * > **Warning:** HTTP/2 explicitly disallows the use of this mechanism/header;
- * > it is specific to HTTP/1.1.
- *
- * [Read more](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Upgrade)
- */
-export const Upgrade = 'Upgrade'
+// -------------------------------------------------------------------------- //
+//                                                                            //
+//                               Non-Standard                                 //
+//                                                                            //
+// -------------------------------------------------------------------------- //
 
 /**
- * Informs the server of proxies through which the request was sent
+ * The `DNT` (Do Not Track) request header indicates the user's tracking
+ * preference. It lets users indicate whether they would prefer privacy rather
+ * than personalized content.
+ *
+ * > @deprecated This feature is no longer recommended. Though some browsers
+ * > might still support it, it may have already been removed from the relevant
+ * > web standards, may be in the process of being dropped, or may only be kept
+ * > for compatibility purposes. Avoid using it, and update existing code if
+ * > possible; see the [compatibility table](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/DNT#browser_compatibility)
+ * > to guide your decision. Be aware that this feature may cease to work at any
+ * > time.
+ *
+ * @note Non-standard
+ *
+ * [Read more](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/DNT)
  */
-export const Via = 'Via'
+export const Dnt = 'DNT'
 
 /**
- * The `Warning` HTTP header contains information about possible problems with
- * the status of the message. More than one `Warning` header may appear in a
- * response.
+ * The `X-Forwarded-For` (XFF) header is a de-facto standard header for
+ * identifying the originating IP address of a client connecting to a web server
+ * through an HTTP proxy or a load balancer.
  *
+ * When traffic is intercepted between clients and servers, server access logs
+ * contain the IP address of the proxy or load balancer only. To see the
+ * original IP address of the client, the `X-Forwarded-For` request header is
+ * used.
  *
- * > @deprecated This feature is no longer recommended.
- * > Though some browsers might still support it, it may have already been
- * > removed from the relevant web standards, may be in the process of being
- * > dropped, or may only be kept for compatibility purposes. Avoid using it,
- * > and update existing code if possible; see the compatibility table at the
- * > bottom of this page to guide your decision. Be aware that this feature may
- * > cease to work at any time.
+ * @note Non-standard
  *
- * [Read more](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Warning)
+ * [Read more](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For)
  */
-export const Warning = 'Warning'
+export const XForwardedFor = 'X-Forwarded-For'
+
+/**
+ * The `X-Forwarded-Host` (XFH) header is a de-facto standard header for
+ * identifying the original host requested by the client in the
+ * {@link Host} HTTP request header.
+ *
+ * @note Non-standard
+ *
+ * [Read more](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host)
+ */
+export const XForwardedHost = 'X-Forwarded-Host'
+
+/**
+ * The `X-Forwarded-Proto` (XFP) header is a de-facto standard header for
+ * identifying the protocol (HTTP or HTTPS) that a client used to connect to
+ * your proxy or load balancer.
+ *
+ * Your server access logs contain the protocol used between the server and the
+ * load balancer, but not the protocol used between the client and the load
+ * balancer.
+ *
+ * To determine the protocol used between the client and the load balancer,
+ * the `X-Forwarded-Proto` request header can be used.
+ *
+ * @note Non-standard, but defacto-standard
+ *
+ * [Read more](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Proto)
+ */
+export const XForwardedProto = 'X-Forwarded-Proto'
+
+/**
+ * Identifies XHR requests
+ * @note Non-standard
+ */
+export const XRequestedWith = 'X-Requested-With'
+
+/**
+ * Used to prevent CSRF
+ * @note Non-standard
+ */
+export const XCSRFToken = 'X-CSRF-Token'

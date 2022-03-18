@@ -4,8 +4,8 @@ export class HttpError extends Error {
   private readonly _code: number
   private readonly _text: string
 
-  constructor(statusCode: number, statusText?: string) {
-    super(statusText ?? getStatusText(statusCode))
+  constructor(statusCode: number, statusText?: string, message?: string) {
+    super(message ?? statusText ?? getStatusText(statusCode))
 
     this._code = statusCode
     this._text = this.message

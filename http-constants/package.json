@@ -2,7 +2,11 @@
   "name": "@poppanator/http-constants",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "exports": {
+    "./*": {
+      "import": "./dist/**/*.js"
+    }
+  },
   "scripts": {
     "test": "jest",
     "build": "tsc -p tsconfig.build.json"

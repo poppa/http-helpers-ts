@@ -1,3 +1,4 @@
-export * from './codes'
 export * from './functions'
-export * from './methods'
+export * as status from './codes'
+export * as method from './methods'
+export * as header from './headers'
