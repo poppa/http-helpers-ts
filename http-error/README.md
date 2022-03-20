@@ -90,3 +90,41 @@ constructor(
   statusTextOrArgs?: string | HttpErrorConstuctorArgs
 )
 ```
+
+### Utility functions
+
+#### `resolveHttStatusCode()`
+
+When dealing with HTTP client libraries you might end up with a HTTP error
+object of sort, but it might not always be clear how to get hold of the
+HTTP status code.
+
+This function tries to resolve the status code by looking at various
+properties with common status code names.
+
+By default the function will check for the `code`, `status` and `statusCode`
+properties and return the value of any of these if the value is a number.
+
+You can also pass additional properties to check in `otherProperties`
+
+```ts
+import { resolveHttStatusCode } from '@poppanator/http-error'
+
+const withCode = { code: 201 }
+resolveHttStatusCode(withCode) // 201
+
+const withStatus = { status: 201 }
+resolveHttStatusCode(withStatus) // 201
+
+const withStatusCode = { statusCode: 201 }
+resolveHttStatusCode(withStatusCode) // 201
+
+const withNonNumeric = { code: '201' }
+resolveHttStatusCode(withNonNumeric) // undefined
+
+const withOutKnownProperty = { prop: 201 }
+resolveHttStatusCode(withOutKnownProperty) // undefined
+
+const withOutKnownProperty = { prop: 201 }
+resolveHttStatusCode(withOutKnownProperty, ['prop']) // 201
+```
