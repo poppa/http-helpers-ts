@@ -1,0 +1,17 @@
+{
+  "packages": ["http-constants", "http-error"],
+  "version": "independent",
+  "command": {
+    "publish": {
+      "ignoreChanges": [
+        "tsconfig.*",
+        "jest.*",
+        ".eslintrc.js",
+        ".gitignore",
+        ".npmrc",
+        ".prettierrc.js",
+        "*.md"
+      ]
+    }
+  }
+}

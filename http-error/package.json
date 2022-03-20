@@ -21,7 +21,8 @@
   "scripts": {
     "test": "jest",
     "build": "tsc -p tsconfig.build.json",
-    "dev": "npm run build -- --watch"
+    "dev": "npm run build -- --watch",
+    "clean": "rimraf dist"
   },
   "dependencies": {
     "@poppanator/http-constants": "*"
