@@ -1,6 +1,10 @@
 import 'jest'
 
-import { method } from './index'
+import { method, type Method } from './index'
+
+interface MyType {
+  method: Method
+}
 
 test('Connect should equal "CONNECT"', () => {
   expect(method.Connect).toEqual('CONNECT')
@@ -36,4 +40,11 @@ test('Put should equal "PUT"', () => {
 
 test('Trace should equal "TRACE"', () => {
   expect(method.Trace).toEqual('TRACE')
+})
+
+test('Method type', () => {
+  const mt: MyType = {
+    method: 'DELETE',
+  }
+  expect(mt.method).toEqual('DELETE')
 })
