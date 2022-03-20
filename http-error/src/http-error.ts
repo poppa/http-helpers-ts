@@ -16,6 +16,7 @@ export class HttpError extends Error {
   private readonly _text: Maybe<string>
 
   /**
+   * Creates a new `HttpError` instance
    *
    * @param statusCode
    *  The HTTP status code, e.g. `301`, `400`, `404`, `500` etc
