@@ -3,14 +3,26 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poppa/http-helpers-ts.git"
+  },
+  "keywords": [
+    "http",
+    "error",
+    "http error"
+  ],
+  "author": "Pontus Östlund",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/poppa/http-helpers-ts/issues"
+  },
+  "homepage": "https://github.com/poppa/http-helpers-ts#readme",
   "scripts": {
     "test": "jest",
     "build": "tsc -p tsconfig.build.json",
     "dev": "npm run build -- --watch"
   },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
   "dependencies": {
     "@poppanator/http-constants": "*"
   }
