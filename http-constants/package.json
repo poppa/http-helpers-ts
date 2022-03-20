@@ -12,6 +12,10 @@
     "constants",
     "http constants"
   ],
+  "files": [
+    "dist",
+    "src"
+  ],
   "author": "Pontus Östlund",
   "license": "MIT",
   "bugs": {

@@ -7,6 +7,10 @@
     "type": "git",
     "url": "git+https://github.com/poppa/http-helpers-ts.git"
   },
+  "files": [
+    "dist",
+    "src"
+  ],
   "keywords": [
     "http",
     "error",

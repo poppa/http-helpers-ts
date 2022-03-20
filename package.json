@@ -12,7 +12,11 @@
     "test": "lerna run test",
     "build": "lerna run build",
     "clean": "lerna run clean",
-    "clean:spotless": "lerna run clean && rimraf node_modules"
+    "clean:spotless": "lerna run clean && rimraf node_modules",
+    "version:prerelease": "lerna version prerelease",
+    "version:patch": "lerna version patch",
+    "version:minor": "lerna version minor",
+    "version:major": "lerna version major"
   },
   "keywords": [
     "http"
