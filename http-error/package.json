@@ -1,6 +1,6 @@
 {
   "name": "@poppanator/http-error",
-  "version": "1.0.1-alpha.0",
+  "version": "1.0.2-alpha.0",
   "description": "",
   "main": "dist/index.js",
   "repository": {
@@ -29,6 +29,6 @@
     "clean": "rimraf dist"
   },
   "dependencies": {
-    "@poppanator/http-constants": "^1.0.1-alpha.0"
+    "@poppanator/http-constants": "^1.0.2-alpha.0"
   }
 }
