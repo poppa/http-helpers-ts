@@ -128,3 +128,21 @@ resolveHttStatusCode(withOutKnownProperty) // undefined
 const withOutKnownProperty = { prop: 201 }
 resolveHttStatusCode(withOutKnownProperty, ['prop']) // 201
 ```
+
+This is the method signature:
+
+```ts
+type PlainObject<T = any> = { [key: string]: T }
+export type IsStatusCodeLike = number | PlainObject
+
+/**
+ * @param arg - Something with maybe a status code
+ * @param otherProperties - Additional properties that might represent a
+ *  status code
+ * @returns The resolved status code or `undefined` if none was found
+ */
+export function resolveHttStatusCode<T extends string[]>(
+  arg: IsStatusCodeLike,
+  otherProperties?: T
+): Maybe<number>
+```
