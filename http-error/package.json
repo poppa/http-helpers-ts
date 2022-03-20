@@ -31,5 +31,6 @@
   },
   "dependencies": {
     "@poppanator/http-constants": "^1.0.2-alpha.0"
-  }
+  },
+  "gitHead": "8c6af4f90dc694c8a67f62f1363cd2b3c58fa74b"
 }
