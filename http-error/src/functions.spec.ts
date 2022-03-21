@@ -1,6 +1,6 @@
 import 'jest'
-import { HttpError } from '../dist'
-import { resolveHttStatusCode } from './functions'
+import { HttpError } from './http-error'
+import { isHttpError, resolveHttStatusCode } from './functions'
 
 test('resolveHttStatusCode should be handle a HttpError instance', () => {
   const err = new HttpError(401)
@@ -37,4 +37,10 @@ test('resolveHttStatusCode should handle numerical additional properties', () =>
 
 test('resolveHttStatusCode should return undefined when additional property is non-numeric', () => {
   expect(resolveHttStatusCode({ st: '200' }, ['st'])).toEqual(undefined)
+})
+
+test('isHttpError should return true when given an HttpError instance and false otherwise', () => {
+  expect(isHttpError(new HttpError(200))).toEqual(true)
+  expect(isHttpError(new Error('Not HttpError'))).toEqual(false)
+  expect(isHttpError('no error')).toEqual(false)
 })

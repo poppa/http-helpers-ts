@@ -93,6 +93,30 @@ constructor(
 
 ### Utility functions
 
+#### `isHttpError()`
+
+Check if something is an instance of `HttpError`
+
+```ts
+import { isHttpError } from '@poppanator/http-error'
+
+try {
+  await doSomethingThatMightThrow()
+} catch (err: unknown) {
+  if (isHttpError(err)) {
+    logger.warn(`Got HTTP error: ${err.fullStatusMessage}`)
+  } else {
+    logger.warn(`Got error: ${err.message}`)
+  }
+}
+```
+
+This is the method signature:
+
+```ts
+export function isHttpError(obj: unknown): obj is HttpError
+```
+
 #### `resolveHttStatusCode()`
 
 When dealing with HTTP client libraries you might end up with a HTTP error

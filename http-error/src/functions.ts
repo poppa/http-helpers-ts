@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { HttpError } from './http-error'
 import type { Maybe } from './_type-types'
 
 // eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
@@ -59,4 +60,11 @@ export function resolveHttStatusCode<T extends string[]>(
   }
 
   return undefined
+}
+
+/**
+ * Returns `true` if `obj` is an instance of {@link HttpError}
+ */
+export function isHttpError(obj: unknown): obj is HttpError {
+  return obj !== null && typeof obj === 'object' && obj instanceof HttpError
 }
