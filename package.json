@@ -16,7 +16,8 @@
     "version:prerelease": "lerna version prerelease",
     "version:patch": "lerna version patch",
     "version:minor": "lerna version minor",
-    "version:major": "lerna version major"
+    "version:major": "lerna version major",
+    "publish": "lerna run build && lerna publish"
   },
   "keywords": [
     "http"
