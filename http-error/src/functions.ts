@@ -37,7 +37,7 @@ const isnum = (a: unknown): a is number => typeof a === 'number'
  *  status code
  * @returns The resolved status code or `undefined` if none was found
  */
-export function resolveHttStatusCode<T extends string[]>(
+export function resolveHttpStatusCode<T extends string[]>(
   arg: IsStatusCodeLike,
   otherProperties?: T
 ): Maybe<number> {
@@ -61,6 +61,12 @@ export function resolveHttStatusCode<T extends string[]>(
 
   return undefined
 }
+
+/**
+ * Original misspelled version, now replaced by {@link resolveHttpStatusCode}
+ * @deprecated
+ */
+export const resolveHttStatusCode = resolveHttpStatusCode
 
 /**
  * Returns `true` if `obj` is an instance of {@link HttpError}

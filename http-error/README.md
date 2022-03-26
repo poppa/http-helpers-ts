@@ -117,7 +117,7 @@ This is the method signature:
 export function isHttpError(obj: unknown): obj is HttpError
 ```
 
-#### `resolveHttStatusCode()`
+#### `resolveHttpStatusCode()`
 
 When dealing with HTTP client libraries you might end up with a HTTP error
 object of sort, but it might not always be clear how to get hold of the
@@ -132,25 +132,25 @@ properties and return the value of any of these if the value is a number.
 You can also pass additional properties to check in `otherProperties`
 
 ```ts
-import { resolveHttStatusCode } from '@poppanator/http-error'
+import { resolveHttpStatusCode } from '@poppanator/http-error'
 
 const withCode = { code: 201 }
-resolveHttStatusCode(withCode) // 201
+resolveHttpStatusCode(withCode) // 201
 
 const withStatus = { status: 201 }
-resolveHttStatusCode(withStatus) // 201
+resolveHttpStatusCode(withStatus) // 201
 
 const withStatusCode = { statusCode: 201 }
-resolveHttStatusCode(withStatusCode) // 201
+resolveHttpStatusCode(withStatusCode) // 201
 
 const withNonNumeric = { code: '201' }
-resolveHttStatusCode(withNonNumeric) // undefined
+resolveHttpStatusCode(withNonNumeric) // undefined
 
 const withOutKnownProperty = { prop: 201 }
-resolveHttStatusCode(withOutKnownProperty) // undefined
+resolveHttpStatusCode(withOutKnownProperty) // undefined
 
 const withOutKnownProperty = { prop: 201 }
-resolveHttStatusCode(withOutKnownProperty, ['prop']) // 201
+resolveHttpStatusCode(withOutKnownProperty, ['prop']) // 201
 ```
 
 This is the method signature:
@@ -165,7 +165,7 @@ export type IsStatusCodeLike = number | PlainObject
  *  status code
  * @returns The resolved status code or `undefined` if none was found
  */
-export function resolveHttStatusCode<T extends string[]>(
+export function resolveHttpStatusCode<T extends string[]>(
   arg: IsStatusCodeLike,
   otherProperties?: T
 ): Maybe<number>
