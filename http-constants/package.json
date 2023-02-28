@@ -2,8 +2,43 @@
   "name": "@poppanator/http-constants",
   "version": "1.0.2",
   "description": "",
-  "main": "dist/index.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist.index.d.ts"
+    },
+    "./codes": {
+      "import": "./dist/codes.js",
+      "require": "./dist/codes.cjs",
+      "types": "./dist/codes.d.ts"
+    },
+    "./methods": {
+      "import": "./dist/methods.js",
+      "require": "./dist/methods.cjs",
+      "types": "./dist/methods.d.ts"
+    },
+    "./texts": {
+      "import": "./dist/texts.js",
+      "require": "./dist/texts.cjs",
+      "types": "./dist/texts.d.ts"
+    },
+    "./tuples": {
+      "import": "./dist/tuples.js",
+      "require": "./dist/tuples.cjs",
+      "types": "./dist/tuples.d.ts"
+    },
+    "./headers": {
+      "import": "./dist/heders.js",
+      "require": "./dist/heders.cjs",
+      "types": "./dist/heders/index.d.ts"
+    }
+  },
   "private": false,
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/poppa/http-helpers-ts.git"
@@ -25,7 +60,7 @@
   "homepage": "https://github.com/poppa/http-helpers-ts#readme",
   "scripts": {
     "test": "jest",
-    "build": "tsc -p tsconfig.build.json",
+    "build": "vite build",
     "dev": "npm run build -- --watch",
     "clean": "rimraf dist"
   },

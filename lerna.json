@@ -10,7 +10,8 @@
         ".gitignore",
         ".npmrc",
         ".prettierrc.js",
-        "*.md"
+        "*.md",
+        "import-test/**/*"
       ]
     }
   }
