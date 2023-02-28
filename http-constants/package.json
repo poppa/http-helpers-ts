@@ -1,6 +1,6 @@
 {
   "name": "@poppanator/http-constants",
-  "version": "1.0.2",
+  "version": "1.0.3-RC.0",
   "description": "",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
