@@ -16,6 +16,7 @@ export default defineConfig({
       entry: {
         index: resolve(base, 'index.ts'),
         codes: resolve(base, 'codes.ts'),
+        functions: resolve(base, 'functions.ts'),
         texts: resolve(base, 'texts.ts'),
         tules: resolve(base, 'tuples.ts'),
         methods: resolve(base, 'methods.ts'),
