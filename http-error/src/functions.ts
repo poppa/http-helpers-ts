@@ -8,7 +8,7 @@ type PlainObject<T = any> = { [key: string]: T }
 // eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
 export type IsStatusCodeLike = number | PlainObject
 
-export function hasProperty<T extends PlainObject, P extends string>(
+function hasProperty<T extends PlainObject, P extends string>(
   o: T,
   prop: P
 ): o is T & { [key in P]: unknown } {
