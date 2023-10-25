@@ -9,7 +9,7 @@
     ".": {
       "import": "./dist/index.js",
       "require": "./dist/index.cjs",
-      "types": "./dist.index.d.ts"
+      "types": "./dist/index.d.ts"
     },
     "./functions": {
       "import": "./dist/functions.js",
@@ -37,9 +37,9 @@
       "types": "./dist/tuples.d.ts"
     },
     "./headers": {
-      "import": "./dist/heders.js",
-      "require": "./dist/heders.cjs",
-      "types": "./dist/heders/index.d.ts"
+      "import": "./dist/headers.js",
+      "require": "./dist/headers.cjs",
+      "types": "./dist/headers/index.d.ts"
     }
   },
   "private": false,
