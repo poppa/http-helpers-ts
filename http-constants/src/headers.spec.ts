@@ -1,6 +1,6 @@
 import 'jest'
 
-import { header } from './index'
+import { header } from './index.js'
 
 test('Accept should be "Accept"', () => {
   expect(header.Accept).toEqual('Accept')

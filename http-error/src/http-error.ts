@@ -1,5 +1,5 @@
 import { getStatusText } from '@poppanator/http-constants'
-import type { Maybe } from './_type-types'
+import type { Maybe } from './_type-types.js'
 
 export type HttpErrorConstuctorArgs = {
   /** Status text */

@@ -1,5 +1,5 @@
-import type { Maybe } from './_type-types'
-import * as tuples from './tuples'
+import type { Maybe } from './_type-types.js'
+import * as tuples from './tuples.js'
 
 const is =
   (res: number) =>

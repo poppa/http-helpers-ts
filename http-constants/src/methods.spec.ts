@@ -1,6 +1,6 @@
 import 'jest'
 
-import { method, type Method } from './index'
+import { method, type Method } from './index.js'
 
 interface MyType {
   method: Method

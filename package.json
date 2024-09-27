@@ -22,12 +22,16 @@
   "keywords": [
     "http"
   ],
-  "author": "Pontus Östlund",
+  "author": {
+    "name": "Pontus Östlund",
+    "url": "https://github.com/poppa"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/poppa/http-helpers-ts/issues"
   },
   "homepage": "https://github.com/poppa/http-helpers-ts#readme",
+  "type": "module",
   "workspaces": [
     "http-constants",
     "http-error"

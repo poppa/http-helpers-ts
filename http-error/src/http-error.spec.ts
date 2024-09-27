@@ -1,5 +1,5 @@
 import 'jest'
-import { HttpError } from './http-error'
+import { HttpError } from './http-error.js'
 
 test('No second constructor argument should give default status text', () => {
   expect(new HttpError(201).statusText).toEqual('Created')

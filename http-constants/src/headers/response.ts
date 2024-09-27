@@ -4,8 +4,8 @@
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
 // Imported for doc purposes only
-import type { Referer } from './request'
-import type { ContentType } from './general'
+import type { Referer } from './request.js'
+import type { ContentType } from './general.js'
 
 /**
  * The `Accept-Patch` response HTTP header advertises which media-type the

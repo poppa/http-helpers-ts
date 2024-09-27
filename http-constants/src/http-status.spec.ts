@@ -1,6 +1,6 @@
 import 'jest'
 
-import * as T from './tuples'
+import * as T from './tuples.js'
 
 describe('1xx - Informational statuses', () => {
   test('Continue', () => {

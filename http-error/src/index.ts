@@ -1,2 +1,2 @@
-export * from './http-error'
-export * from './functions'
+export * from './http-error.js'
+export * from './functions.js'

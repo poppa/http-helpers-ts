@@ -1,6 +1,6 @@
 import 'jest'
 
-import * as F from './functions'
+import * as F from './functions.js'
 
 test(
   'isInformational() should return true for values between 100 and 199 ' +

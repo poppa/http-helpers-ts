@@ -1,6 +1,6 @@
 import 'jest'
-import { HttpError } from './http-error'
-import { isHttpError, resolveHttpStatusCode } from './functions'
+import { HttpError } from './http-error.js'
+import { isHttpError, resolveHttpStatusCode } from './functions.js'
 
 test('resolveHttpStatusCode should be handle a HttpError instance', () => {
   const err = new HttpError(401)

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { HttpError } from './http-error'
-import type { Maybe } from './_type-types'
+import { HttpError } from './http-error.js'
+import type { Maybe } from './_type-types.js'
 
 // eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
 type PlainObject<T = any> = { [key: string]: T }

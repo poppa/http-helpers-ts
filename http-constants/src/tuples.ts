@@ -1,5 +1,5 @@
-import * as C from './codes'
-import * as T from './texts'
+import * as C from './codes.js'
+import * as T from './texts.js'
 
 export type StatusTuple = [number, string]
 
