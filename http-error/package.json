@@ -1,6 +1,6 @@
 {
   "name": "@poppanator/http-error",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -44,7 +44,7 @@
     "clean": "rimraf dist"
   },
   "dependencies": {
-    "@poppanator/http-constants": "^2.0.1"
+    "@poppanator/http-constants": "^3.0.0"
   },
   "gitHead": "4db60947bc1b0f9d14d8aa613725a7717c02243d"
 }
