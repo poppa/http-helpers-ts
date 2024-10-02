@@ -2,12 +2,20 @@
   "name": "@poppanator/http-error",
   "version": "2.0.1",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/cjs/index.d.ts",
   "type": "module",
   "private": false,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/poppa/http-helpers-ts.git"
+  },
+  "exports": {
+    ".": {
+      "default": "./dist/esm/index.js",
+      "types": "./dist/esm/index.d.ts"
+    }
   },
   "files": [
     "dist",
@@ -29,7 +37,9 @@
   "homepage": "https://github.com/poppa/http-helpers-ts#readme",
   "scripts": {
     "test": "jest",
-    "build": "tsc -p tsconfig.build.json",
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc -p tsconfig.build.json",
+    "build:cjs": "tsc -p tsconfig.build-cjs.json",
     "dev": "npm run build -- --watch",
     "clean": "rimraf dist"
   },
