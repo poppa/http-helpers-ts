@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "types": "dist/cjs/index.d.ts",
+  "types": "dist/esm/index.d.ts",
   "type": "module",
   "private": false,
   "repository": {
@@ -13,7 +13,8 @@
   },
   "exports": {
     ".": {
-      "default": "./dist/esm/index.js",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
       "types": "./dist/esm/index.d.ts"
     }
   },
